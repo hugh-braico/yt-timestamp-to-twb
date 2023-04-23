@@ -73,6 +73,7 @@ class MainWindow(QMainWindow):
         self.version_label = QLabel("Game version")
         self.version_combobox = QComboBox()
         self.version_list = [
+            'Black Dahlia Patch',
             'Black Dahlia Alpha',
             'Umbrella Patch',
             'Annie Patch',

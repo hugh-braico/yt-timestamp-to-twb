@@ -1,5 +1,5 @@
 import re
-from fuzzywuzzy import process
+from thefuzz import process, fuzz
 
 char_abv_lookup = {
     # Annie
@@ -163,10 +163,16 @@ def parse_team(team: str):
     detected_chars = re.split(r"\s*[\|,/]\s*", re.sub(r"[\(\)\<\>]", "", team))
     # match against dictionary of aliases
     for i in range(len(detected_chars)):
-        ret_chars[i] = fuzzymatch(detected_chars[i].upper())
+        ret_chars[i] = fuzzymatch(detected_chars[i].upper().strip())
     return ret_chars[0], ret_chars[1], ret_chars[2]
 
 # Fuzzy match against the alias dictionary
 def fuzzymatch(name):
-    choice = process.extractOne(name, char_abv_lookup.keys())
-    return char_abv_lookup[choice[0]]
+    # Look for an exact match first
+    if name in char_abv_lookup:
+        print(f"{name} := {char_abv_lookup[name]}")
+        return char_abv_lookup[name]
+    else:  
+        choice = process.extractOne(name, char_abv_lookup.keys(), scorer=fuzz.ratio)
+        print(f"{name} -> {choice[0]} -> {char_abv_lookup[choice[0]]}")
+        return char_abv_lookup[choice[0]]

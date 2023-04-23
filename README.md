@@ -40,13 +40,15 @@ However, there are some hard rules:
     * So `SeaJay (VA/CE/BB)` is fine, but `SeaJay VA/CE/BB` is not.
     * This is to make it easy to tell where the player name ends.
     * You can't use `[]` because that's usually reserved for sponsor tags.
+* Some videos like to use (L) or (W) to denote losers or winners side. Just 
+  manually edit these out before converting, they're only on 1 or 2 sets anyway
 
 Examples of valid teams:
 
 * `(AN/CE/BB)`
 * `<Annie,Cerebella,Band>`
 * `(Annie, Bella, Band)`
-* `<  Anee,   ceroBELLA,    Beeg Bando     >`
+* `<  Anee,   ceraBELLA,    Beg Bend     >`
 
 ## Entire timestamp line format
 
@@ -75,6 +77,6 @@ pyinstaller --onefile -w -i assets/bigband.ico main.py
 
 ## TODO
 
-* .exe packaging
+* Improve fuzzy match
 * Make diagrams/demo.gif
 * Migrate to pytwb when that becomes a thing

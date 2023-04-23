@@ -1,2 +1,2 @@
 pyqt6
-fuzzywuzzy
+thefuzz
