@@ -1,6 +1,6 @@
 # yt-timestamp-to-twb
 
-![demo](diagrams/demo.gif)
+![demo](diagrams/demo.png)
 
 Lets you paste YouTube description timestamps into a box and it will try its
 best to convert that to a TWB-formatted .csv file.
@@ -74,9 +74,3 @@ Examples:
 ```bash
 pyinstaller --onefile -w -i assets/bigband.ico main.py
 ```
-
-## TODO
-
-* Improve fuzzy match
-* Make diagrams/demo.gif
-* Migrate to pytwb when that becomes a thing
