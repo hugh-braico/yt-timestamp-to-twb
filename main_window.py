@@ -206,7 +206,7 @@ class MainWindow(QMainWindow):
         outfile_name = self.outfile_name
         csv_list     = [twb_csv_header()]
 
-        mmss_pattern  =       r"(\d+):(\d+)\s+([^\s\(\<\)\>][^\(\<\)\>]*[^\s\(\<\)\>])\s*([\(\<].+[\)\>])?\s+([versuVERSU]+)\s+([^\s\(\<\)\>][^\(\<\)\>]*[^\s\(\<\)\>])\s*([\(\<].+[\)\>])?"
+        mmss_pattern  =       r"(\d+):(\d+)\s+([^\s\(\<\)\>][^\(\<\)\>]*[^\s\(\<\)\>])\s*([\(\<].+[\)\>])?\s+([versuVERSU\.]+)\s+([^\s\(\<\)\>][^\(\<\)\>]*[^\s\(\<\)\>])\s*([\(\<].+[\)\>])?"
         hmmss_pattern = r"(\d+):" + mmss_pattern
 
         teams_all_supplied = True
@@ -217,7 +217,7 @@ class MainWindow(QMainWindow):
             p2char1 = "N"; p2char2 = "N"; p2char3 = "N"
 
             hmmss_match = re.search(hmmss_pattern, timestamp_line)
-            mmss_match = re.search(mmss_pattern, timestamp_line)
+            mmss_match  = re.search(mmss_pattern, timestamp_line)
 
             # Capture group behavior depending if its a 12:34 or 1:23:45 stamp
             if hmmss_match:
