@@ -18,6 +18,8 @@ into a database like TWB, STR etc.
 * Click "Create CSV", the right pane should display errors/results
 * The data will be saved to the filename you chose, don't copy stuff from the 
   right pane!
+* If the timestamps didn't supply the teams, then you'll need to fill those
+  out yourself in the csv file.
 
 ## Team format
 
