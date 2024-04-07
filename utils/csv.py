@@ -4,11 +4,11 @@ import logging
 
 # list of regions (Following the same naming as TWB)
 region_list = [
-    "Europe", 
-    "Asia", 
-    "North America", 
-    "Oceania", 
-    "South America"
+    "North America",
+    "South America",
+    "Oceania",
+    "Europe",
+    "Asia"
 ]
 
 # list of Skullgirls versions (Following the same naming as TWB)

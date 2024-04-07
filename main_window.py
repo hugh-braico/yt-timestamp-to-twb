@@ -20,7 +20,7 @@ from PyQt6.QtWidgets import (
 # custom functions
 from utils.timestamp import timestamp_url
 from utils.parsing import parse_team
-from utils.csv   import validate_csv_fields, twb_csv_header, twb_csv_row
+from utils.csv   import validate_csv_fields, twb_csv_header, twb_csv_row, region_list, version_list
 
 
 # Main window class
@@ -56,13 +56,7 @@ class MainWindow(QMainWindow):
         # Region selector
         self.region_label = QLabel("Event region")
         self.region_combobox = QComboBox()
-        self.region_list = [
-            "North America", 
-            "Oceania", 
-            "Europe", 
-            "Asia", 
-            "South America"
-        ]
+        self.region_list = region_list
         self.region_combobox.addItems(self.region_list)
 
         # Netplay
@@ -72,23 +66,7 @@ class MainWindow(QMainWindow):
         # Version
         self.version_label = QLabel("Game version")
         self.version_combobox = QComboBox()
-        self.version_list = [
-            'Black Dahlia Patch',
-            'Black Dahlia Alpha',
-            'Umbrella Patch',
-            'Annie Patch',
-            'Annie Patch Beta',
-            '2E+ Final',
-            '2E+ (old UD)',
-            '2E',
-            'Beowulf Patch',
-            'Eliza Patch',
-            'Fukua Patch',
-            'Big Band Patch',
-            'Encore',
-            'MDE',
-            'SDE'
-        ]
+        self.version_list = version_list
         self.version_combobox.addItems(self.version_list)
 
         # URL
