@@ -28,7 +28,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        self.setWindowTitle("yt-timestamp-to-twb v1.0")
+        self.setWindowTitle("yt-timestamp-to-twb")
         self.setWindowIcon(QtGui.QIcon('assets/bigband.png'))
 
         #######################################################################
