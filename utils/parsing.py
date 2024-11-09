@@ -73,6 +73,11 @@ char_abv_lookup = {
     "FUK":          "FU",
     "FUKUA":        "FU",
 
+    # Marie
+    "MA":           "MA",
+    "MAR":          "MA",
+    "MARIE":        "MA",
+
     # Ms. Fortune
     "MF":           "MF",
     "MI":           "MF",
