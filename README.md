@@ -19,7 +19,7 @@ into a database like TWB, STR etc.
 * The data will be saved to the filename you chose, don't copy stuff from the 
   right pane!
 * If the timestamps didn't supply the teams, then you'll need to fill those
-  out yourself in the csv file.
+  out yourself in the csv file. You can edit it in Excel or in plaintext.
 
 ## Team format
 
@@ -71,7 +71,7 @@ Examples:
 * `6:26 Drip vs Gojirark`
 * `0:41:08 Greenhood <Eliza, Annie, Robo> vs Aeiry <Brella, Annie, Band>`
 
-## Build your own .exe release
+## Build your own .exe release from source
 
 ```bash
 pyinstaller --onefile -w -i assets/bigband.ico main.py
