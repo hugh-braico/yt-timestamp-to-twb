@@ -21,7 +21,13 @@ into a database like TWB, STR etc.
 * If the timestamps didn't supply the teams, then you'll need to fill those
   out yourself in the csv file. You can edit it in Excel or in plaintext.
 
-## Team format
+## Formatting
+
+tl:dr - each timestamp line should look something like this:
+
+```
+1:23:45 Player 1 (FI/CE/BB) vs Player 2 (MF/BD/DB)
+```
 
 There is a great deal of freedom in writing the teams:
 
@@ -37,7 +43,7 @@ There is a great deal of freedom in writing the teams:
 However, there are some hard rules:
 
 * Characters must be separated with `,`, `/`, or `|`
-    * So `Bella/Band` is fine, but `BellaBand` is not.
+    * So `Bella/Band` is fine, but `BellaBand` or `Bella Band` is not.
 * The entire team must be enclosed in `()` or `<>`.
     * So `SeaJay (VA/CE/BB)` is fine, but `SeaJay VA/CE/BB` is not.
     * This is to make it easy to tell where the player name ends.
