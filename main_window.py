@@ -177,7 +177,9 @@ class MainWindow(QMainWindow):
         else:
             NETPLAY = 0
         EVENT        = self.event_input.text()
-        DATE         = self.date_picker.date().toString(Qt.DateFormat.ISODate)
+        # Excel will fuck with the formatting if we don't add quotes here.
+        # Slowtrain will be smart enough to strip any quotes when importing.
+        DATE         = f"\'{self.date_picker.date().toString(Qt.DateFormat.ISODate)}\'"
         REGION       = self.region_combobox.currentText()
         VERSION      = self.version_combobox.currentText()
         BASE_URL     = self.url_input.text()

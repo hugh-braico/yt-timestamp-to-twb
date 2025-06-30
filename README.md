@@ -25,29 +25,29 @@ into a database like TWB, STR etc.
 
 tl:dr - each timestamp line should look something like this:
 
-```
+```plaintext
 1:23:45 Player 1 (FI/CE/BB) vs Player 2 (MF/BD/DB)
 ```
 
 There is a great deal of freedom in writing the teams:
 
 * Full (Cerebella), abbreviated (CE, BE), and colloquial (Bella) names are okay
-    * Mixing and matching between them is fine too
+  * Mixing and matching between them is fine too
 * Arbitary amount of space between characters are ok.
 * Case insensitive.
 * You can optionally use `N` to denote empty slots in a team.
-    * eg. `Filia/N/N` for solo Filia
-    * eg. `CE, Band, N` for duo bella/band
+  * eg. `Filia/N/N` for solo Filia
+  * eg. `CE, Band, N` for duo bella/band
 * Fuzzy-matched, so even spelling errors (Cerabella) are usually okay.
 
 However, there are some hard rules:
 
 * Characters must be separated with `,`, `/`, or `|`
-    * So `Bella/Band` is fine, but `BellaBand` or `Bella Band` is not.
+  * So `Bella/Band` is fine, but `BellaBand` or `Bella Band` is not.
 * The entire team must be enclosed in `()` or `<>`.
-    * So `SeaJay (VA/CE/BB)` is fine, but `SeaJay VA/CE/BB` is not.
-    * This is to make it easy to tell where the player name ends.
-    * You can't use `[]` because that's usually reserved for sponsor tags.
+  * So `SeaJay (VA/CE/BB)` is fine, but `SeaJay VA/CE/BB` is not.
+  * This is to make it easy to tell where the player name ends.
+  * You can't use `[]` because that's usually reserved for sponsor tags.
 * Some videos like to use (L) or (W) to denote losers or winners side. Just 
   manually edit these out before converting, they're only on 1 or 2 sets anyway
 
@@ -62,12 +62,12 @@ Examples of valid teams:
 
 * Timestamp must be `hours:minutes:seconds` or `minutes:seconds`
 * Player name followed optionally by a team
-    * If the team isn't supplied, you will have to fix the csv manually!
+  * If the team isn't supplied, you will have to fix the csv manually!
 * Must be a "vs" or "versus" in between
 
 In summary:
 
-```
+```plaintext
 (optional hour:)minutes:seconds P1Name (optional team1) vs/versus P2Name (optional team2)`
 ```
 
@@ -79,6 +79,7 @@ Examples:
 
 ## Build your own .exe release from source
 
-```bash
+```shell
+python -m pip install -r requirements.txt
 pyinstaller --onefile -w -i assets/bigband.ico main.py
 ```
