@@ -77,9 +77,36 @@ Examples:
 * `6:26 Drip vs Gojirark`
 * `0:41:08 Greenhood <Eliza, Annie, Robo> vs Aeiry <Brella, Annie, Band>`
 
+## Run the application from source
+
+Probably the easiest way to run this on Linux/MacOS, but I haven't tested. You can also just run the exe through Wine.
+Unzip the source to a folder somewhere (or use `git clone https://github.com/hugh-braico/yt-timestamp-to-twb.git`).
+
+```bash
+# note: depending on your setup, your python binary might be python3, not python.
+
+# Create a virtual environment (You only need to do this part once)
+python -m venv .venv
+
+# Activate virtual environment
+source .venv/bin/activate
+
+# Install dependencies (You only need to do this part once)
+python -m pip install -r requirements.txt
+
+# Run the application
+python main.py
+```
+
 ## Build your own .exe release from source
 
+You can use `pyinstaller` for this.
+
 ```shell
+python -m venv .venv
+source .venv/bin/activate
 python -m pip install -r requirements.txt
 pyinstaller --onefile -w -i assets/bigband.ico main.py
 ```
+
+This will create an exe file in the `dist/` subdirectory.
