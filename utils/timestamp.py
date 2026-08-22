@@ -23,7 +23,5 @@ def timestamp_url(url: str, h: int, m: int, s: int) -> str:
         return f"{url}{query_string}{h}h{m}m{s}s"
     elif m > 0: 
         return f"{url}{query_string}{m}m{s}s"
-    elif s > 0:
-        return f"{url}{query_string}{s}s"
     else:
-        return url
+        return f"{url}{query_string}{s}s"
